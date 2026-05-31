@@ -4,6 +4,7 @@ import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
 import Pricing from "@/components/sections/Pricing";
 import Trainers from "@/components/sections/Trainers";
+import Reviews from "@/components/sections/Reviews";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <About />
       <Pricing />
       <Trainers />
+      <Reviews />
       <Contact />
       <Footer />
     </main>

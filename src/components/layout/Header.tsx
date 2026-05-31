@@ -10,6 +10,7 @@ const navLinks = [
   { href: "#nosotros", label: "Nosotros" },
   { href: "#precios", label: "Precios" },
   { href: "#entrenadores", label: "Entrenadores" },
+  { href: "#resenas", label: "Reseñas" },
   { href: "#contacto", label: "Contacto" },
 ];
 
