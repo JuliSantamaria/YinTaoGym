@@ -2,51 +2,49 @@ import Link from "next/link";
 
 const plans = [
   {
-    name: "Básico",
-    price: "29",
+    name: "Gimnasio",
+    price: "15.000",
     period: "/mes",
-    description: "Perfecto para empezar tu viaje fitness",
+    description: "Acceso completo a la sala de musculación y cardio",
     features: [
-      "Acceso a zona de musculación",
-      "Acceso a zona cardio",
-      "Horario: 6:00 - 22:00",
-      "Duchas y vestuarios",
+      "Sala de musculación y cardio",
+      "Lunes a sábado",
+      "Vestuarios disponibles",
+      "Seguimiento inicial gratuito",
     ],
     notIncluded: [
-      "Clases grupales",
-      "Entrenador personal",
-      "Acceso 24/7",
+      "Clases grupales de Funcional",
+      "Clases de Arte Marcial Yin Tao",
     ],
     highlighted: false,
   },
   {
-    name: "Premium",
-    price: "49",
+    name: "Funcional + Gimnasio",
+    price: "20.000",
     period: "/mes",
-    description: "El más popular entre nuestros miembros",
+    description: "La combinación ideal para progresar rápido",
     features: [
-      "Acceso completo al gimnasio",
-      "Todas las clases grupales",
-      "Acceso 24/7",
-      "Duchas y vestuarios",
-      "1 sesión de PT al mes",
-      "App de seguimiento",
+      "Sala de musculación y cardio",
+      "Clases grupales de Funcional",
+      "Lunes a sábado",
+      "Vestuarios disponibles",
+      "Seguimiento inicial gratuito",
+      "Comunidad activa y motivadora",
     ],
     notIncluded: [],
     highlighted: true,
   },
   {
-    name: "Elite",
-    price: "79",
+    name: "Plan Completo",
+    price: "27.000",
     period: "/mes",
-    description: "Para los que buscan resultados extraordinarios",
+    description: "Acceso total: cuerpo, fuerza y disciplina",
     features: [
-      "Todo lo del plan Premium",
-      "4 sesiones de PT al mes",
-      "Plan nutricional personalizado",
-      "Acceso a zona spa y sauna",
-      "Parking reservado",
-      "Invitados gratis (2/mes)",
+      "Todo lo del plan Funcional + Gimnasio",
+      "Clases de Arte Marcial Yin Tao",
+      "Para niños, jóvenes y adultos",
+      "Seguimiento personalizado",
+      "Descuentos para grupos familiares",
     ],
     notIncluded: [],
     highlighted: false,
@@ -98,7 +96,7 @@ export default function Pricing() {
               </div>
 
               <div className="text-center mb-6">
-                <span className={`text-4xl font-black ${plan.highlighted ? "text-[#0a0a0a]" : "text-white"}`}>{plan.price}€</span>
+                <span className={`text-4xl font-black ${plan.highlighted ? "text-[#0a0a0a]" : "text-white"}`}>${plan.price}</span>
                 <span className={`text-sm ${plan.highlighted ? "text-[#0a0a0a]/70" : "text-[#5a5a5a]"}`}>
                   {plan.period}
                 </span>

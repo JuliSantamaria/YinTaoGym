@@ -1,27 +1,21 @@
 const trainers = [
   {
-    name: "Carlos Mendoza",
-    role: "Especialista en Musculación",
-    experience: "12 años de experiencia",
-    description: "Experto en hipertrofia y fuerza. Campeón regional de powerlifting.",
+    name: "Prof. de Sala",
+    role: "Entrenador de Musculación",
+    experience: "Especialista en fuerza y musculación",
+    description: "Te enseña la técnica correcta para cada ejercicio y arma tu rutina personalizada desde el primer día.",
   },
   {
-    name: "Laura Sánchez",
-    role: "Entrenadora de CrossFit",
-    experience: "8 años de experiencia",
-    description: "Certificada CrossFit Level 3. Especialista en entrenamiento funcional.",
+    name: "Instructor Funcional",
+    role: "Entrenador de Funcional",
+    experience: "Clases grupales dinámicas y motivadoras",
+    description: "Clases en circuito con ejercicios funcionales, para mejorar tu condición física, fuerza y coordinación en grupo.",
   },
   {
-    name: "Miguel Torres",
-    role: "Nutricionista Deportivo",
-    experience: "10 años de experiencia",
-    description: "Máster en nutrición deportiva. Planes personalizados para cada meta.",
-  },
-  {
-    name: "Ana García",
-    role: "Instructora de Yoga y Pilates",
-    experience: "7 años de experiencia",
-    description: "Certificada en Hatha y Vinyasa Yoga. Especialista en flexibilidad.",
+    name: "Maestro de Yin Tao",
+    role: "Instructor de Arte Marcial Yin Tao",
+    experience: "Instructor certificado en Yin Tao",
+    description: "Lidera las clases del arte marcial Yin Tao: enseña disciplina, defensa personal y valores a niños, jóvenes y adultos.",
   },
 ];
 
@@ -38,13 +32,13 @@ export default function Trainers() {
             ENTRENADORES EXPERTOS
           </h2>
           <p className="text-[#a0a0a0] max-w-2xl mx-auto text-base">
-            Profesionales certificados y apasionados por ayudarte a alcanzar 
-            tus metas fitness.
+            Nuestros profesores son la esencia del gimnasio: comprometidos,
+            cercanos y siempre listos para acompañarte.
           </p>
         </div>
 
         {/* Trainers Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {trainers.map((trainer, index) => (
             <div
               key={index}

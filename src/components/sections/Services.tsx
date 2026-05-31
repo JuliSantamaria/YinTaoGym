@@ -1,33 +1,18 @@
 const services = [
   {
     icon: "M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4",
-    title: "Musculación",
-    description: "Equipamiento de última generación para desarrollar fuerza y masa muscular con técnicas avanzadas.",
+    title: "Gimnasio",
+    description: "Sala de musculación completa con pesas libres, máquinas y zona de cardio. Todo lo que necesitás para entrenar a tu ritmo, con el ambiente cálido del barrio.",
   },
   {
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
-    title: "Cardio",
-    description: "Zona cardio equipada con cintas, bicicletas y elípticas para mejorar tu resistencia.",
+    title: "Funcional",
+    description: "Clases grupales de entrenamiento funcional para mejorar tu condición física, fuerza y resistencia. Dinámica, divertida y para todos los niveles.",
   },
   {
-    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
-    title: "Clases Grupales",
-    description: "Spinning, CrossFit, Yoga, Pilates y más. Entrena en comunidad con energía contagiosa.",
-  },
-  {
-    icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
-    title: "Entrenamiento Personal",
-    description: "Programas personalizados con seguimiento profesional para alcanzar tus metas específicas.",
-  },
-  {
-    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-    title: "Nutrición",
-    description: "Asesoramiento nutricional profesional para complementar tu entrenamiento y maximizar resultados.",
-  },
-  {
-    icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
-    title: "Recuperación",
-    description: "Zona de stretching, sauna y masajes para una recuperación óptima post-entrenamiento.",
+    icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z",
+    title: "Arte Marcial Yin Tao",
+    description: "Clases grupales del arte marcial Yin Tao: disciplina, defensa personal y valores. Un camino de superación personal para niños, jóvenes y adultos.",
   },
 ];
 
@@ -44,8 +29,8 @@ export default function Services() {
             TODO LO QUE NECESITAS
           </h2>
           <p className="text-[#a0a0a0] max-w-2xl mx-auto text-base">
-            Ofrecemos una experiencia completa de entrenamiento con instalaciones 
-            de primer nivel y servicios diseñados para tu éxito.
+            Tres propuestas para cada objetivo: tu cuerpo, tu condición y tu disciplina mental.
+            En Yin Tao encontrás todo en un solo lugar.
           </p>
         </div>
 

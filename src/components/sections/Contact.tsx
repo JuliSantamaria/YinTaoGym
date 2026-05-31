@@ -41,8 +41,8 @@ export default function Contact() {
               <span className="block text-[#8a8a8a]">EMPEZAR?</span>
             </h2>
             <p className="text-[#a0a0a0] text-base mb-6 leading-relaxed">
-              Contáctanos y te ayudaremos a elegir el plan perfecto para ti. 
-              ¡Tu primera visita es gratuita!
+              ¿Querés conocer el gimnasio? ¡Vení a visitarnos, la primera clase
+              es gratis! Te esperamos con los brazos abiertos.
             </p>
 
             {/* Contact info */}
@@ -72,7 +72,7 @@ export default function Contact() {
                 <div>
                   <h3 className="text-white font-semibold text-sm mb-1">Dirección</h3>
                   <p className="text-[#a0a0a0] text-sm">
-                    Calle Ejemplo 123, 28001 Madrid
+                    Av. José María Moreno 1832 - CABA
                   </p>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-sm mb-1">Teléfono</h3>
-                  <p className="text-[#a0a0a0] text-sm">+34 912 345 678</p>
+                  <p className="text-[#a0a0a0] text-sm">+54 9...</p>
                 </div>
               </div>
 
@@ -117,7 +117,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-sm mb-1">Email</h3>
-                  <p className="text-[#a0a0a0] text-sm">info@yintao.com</p>
+                  <p className="text-[#a0a0a0] text-sm">contacto@yintaogym.com</p>
                 </div>
               </div>
 
@@ -139,7 +139,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-sm mb-1">Horario</h3>
-                  <p className="text-[#a0a0a0] text-sm">24/7 - Abierto todos los días</p>
+                  <p className="text-[#a0a0a0] text-sm">Lunes a Viernes: 7:00 – 21:00 | Sábados: 8:00 – 13:00</p>
                 </div>
               </div>
             </div>

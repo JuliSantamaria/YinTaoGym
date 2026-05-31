@@ -28,7 +28,7 @@ export default function Header() {
                 alt="Yin Tao Logo"
                 width={48}
                 height={48}
-                className="object-contain"
+                className="object-contain w-full h-full"
               />
             </div>
             <div className="flex flex-col">
@@ -36,7 +36,7 @@ export default function Header() {
                 YIN<span className="text-[#F1F65B]">TAO</span>
               </span>
               <span className="text-[9px] text-[#F1F65B]/70 uppercase tracking-[0.2em] font-medium">
-                Sede Central
+                Sede central
               </span>
             </div>
           </Link>

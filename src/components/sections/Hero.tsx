@@ -24,22 +24,22 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 bg-[#1f1f1f]/50 border border-[#3a3a3a] rounded-full px-2 py-2 mb-8">
             <span className="w-1.5 h-1.5 bg-[#F1F65B] rounded-full animate-pulse"></span>
             <span className="text-[#a0a0a0] text-xs font-medium">
-              Abierto 24/7 - Sin excusas
+              Tu barrio, tu gimnasio — ¡Yin Tao te espera!
             </span>
           </div>
 
           {/* Título principal */}
           <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
-            FORJA TU
+            ENTRENÁ CON
             <span className="block bg-gradient-to-r from-[#F1F65B] to-[#F5F87A] bg-clip-text text-transparent">
-              MEJOR VERSIÓN
+              TU COMUNIDAD
             </span>
           </h1>
 
           {/* Subtítulo */}
           <p className="text-xl md:text-2xl text-[#a0a0a0] mb-10 max-w-2xl mx-auto">
-            Equipamiento de élite, entrenadores certificados y una comunidad que 
-            te impulsa a superar tus límites cada día.
+            Gimnasio equipado, clases funcionales y Arte Marcial Yin Tao. 
+            El gimnasio de barrio que te hace sentir en familia.
           </p>
 
           {/* CTAs */}
@@ -61,16 +61,16 @@ export default function Hero() {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-[#1f1f1f] w-full">
             <div className="text-center">
-              <p className="text-4xl md:text-5xl font-black text-white">500+</p>
-              <p className="text-[#5a5a5a] mt-2 text-sm">Miembros Activos</p>
+              <p className="text-4xl md:text-5xl font-black text-white">3</p>
+              <p className="text-[#5a5a5a] mt-2 text-sm">Disciplinas</p>
             </div>
             <div className="text-center">
-              <p className="text-4xl md:text-5xl font-black text-white">15+</p>
-              <p className="text-[#5a5a5a] mt-2 text-sm">Entrenadores</p>
+              <p className="text-4xl md:text-5xl font-black text-white">+5</p>
+              <p className="text-[#5a5a5a] mt-2 text-sm">Años en el barrio</p>
             </div>
             <div className="text-center">
-              <p className="text-4xl md:text-5xl font-black text-white">50+</p>
-              <p className="text-[#5a5a5a] mt-2 text-sm">Clases Semanales</p>
+              <p className="text-4xl md:text-5xl font-black text-white">100%</p>
+              <p className="text-[#5a5a5a] mt-2 text-sm">Comunidad</p>
             </div>
           </div>
         </div>

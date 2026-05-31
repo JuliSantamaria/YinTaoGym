@@ -2,21 +2,19 @@ import Link from "next/link";
 
 const footerLinks = {
   servicios: [
-    { label: "Musculación", href: "#" },
-    { label: "Cardio", href: "#" },
-    { label: "Clases Grupales", href: "#" },
-    { label: "Entrenamiento Personal", href: "#" },
+    { label: "Gimnasio", href: "#servicios" },
+    { label: "Funcional", href: "#servicios" },
+    { label: "Arte Marcial Yin Tao", href: "#servicios" },
   ],
   empresa: [
     { label: "Sobre Nosotros", href: "#nosotros" },
-    { label: "Entrenadores", href: "#entrenadores" },
-    { label: "Horarios", href: "#" },
-    { label: "Blog", href: "#" },
+    { label: "Nuestros Profesores", href: "#entrenadores" },
+    { label: "Horarios", href: "#contacto" },
+    { label: "Precios", href: "#precios" },
   ],
   legal: [
     { label: "Política de Privacidad", href: "#" },
     { label: "Términos y Condiciones", href: "#" },
-    { label: "Cookies", href: "#" },
   ],
 };
 
@@ -43,8 +41,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-[#a0a0a0] mb-5 max-w-md text-sm">
-              Transforma tu cuerpo, transforma tu vida. Somos más que un gimnasio, 
-              somos tu comunidad de entrenamiento.
+              El gimnasio de tu barrio. Gimnasio, Funcional y Arte Marcial Yin Tao:
+              tres caminos, una sola comunidad.
             </p>
             {/* Redes sociales */}
             <div className="flex gap-3 justify-center md:justify-start">

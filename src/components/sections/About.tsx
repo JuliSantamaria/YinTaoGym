@@ -1,10 +1,10 @@
 const features = [
-  "Equipamiento de última generación",
-  "Abierto 24 horas, 7 días",
-  "Vestuarios con duchas y taquillas",
-  "Zona de stretching y recuperación",
-  "WiFi gratuito en todas las instalaciones",
-  "Parking gratuito para miembros",
+  "Sala de musculación con pesas libres y máquinas",
+  "Clases grupales de Funcional",
+  "Arte Marcial Yin Tao para todas las edades",
+  "Ambiente familiar y comunitario",
+  "Profesores con experiencia y dedicación",
+  "Horarios flexibles de lunes a sábado",
 ];
 
 export default function About() {
@@ -55,13 +55,13 @@ export default function About() {
               <span className="block text-[#8a8a8a]">GIMNASIO</span>
             </h2>
             <p className="text-[#a0a0a0] text-base mb-5 leading-relaxed">
-              En YinTao creemos que el fitness es un estilo de vida. Desde 2014 
-              hemos ayudado a miles de personas a transformar sus cuerpos y sus 
-              vidas a través del entrenamiento de calidad.
+              En Yin Tao creemos que el deporte transforma vidas. Somos un gimnasio 
+              de barrio donde cada persona encuentra su lugar, ya sea en la sala de 
+              musculación, en las clases funcionales o en el dojo de arte marcial.
             </p>
             <p className="text-[#a0a0a0] text-base mb-6 leading-relaxed">
-              Nuestras instalaciones de 2000m² cuentan con el mejor equipamiento 
-              del mercado y un equipo de profesionales comprometidos con tu éxito.
+              Nuestro equipo de profesores está comprometido con vos: te acompañamos 
+              en cada etapa, desde el primer día hasta que alcances tus metas.
             </p>
 
             {/* Features list */}
