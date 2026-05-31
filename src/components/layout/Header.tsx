@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white">
               <Image
-                src="/logo.png"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo.png`}
                 alt="Yin Tao Logo"
                 width={48}
                 height={48}
