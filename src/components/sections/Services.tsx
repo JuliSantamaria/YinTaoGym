@@ -152,20 +152,7 @@ export default function Services() {
 
                 {/* Arrow */}
                 <div className="mt-5 flex items-center gap-2 text-[#F1F65B] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-xs font-semibold">Saber más</span>
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
+
                 </div>
               </div>
             ))}

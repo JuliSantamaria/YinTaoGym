@@ -19,17 +19,17 @@ const plans = [
     highlighted: false,
   },
   {
-    name: "Funcional + Gimnasio",
-    price: "20.000",
+    name: "Yin-Tao + Gimnasio",
+    price: "50.000",
     period: "/mes",
     description: "La combinación ideal para progresar rápido",
     features: [
-      "Sala de musculación y cardio",
-      "Clases grupales de Funcional",
+      "Sala de musculación",
       "Lunes a sábado",
       "Vestuarios disponibles",
-      "Seguimiento inicial gratuito",
+      "Seguimiento constante",
       "Comunidad activa y motivadora",
+      "Clases de Yin-Tao disponibles"
     ],
     notIncluded: [],
     highlighted: true,
@@ -64,7 +64,7 @@ export default function Pricing() {
             PLANES PARA TODOS
           </h2>
           <p className="text-[#a0a0a0] max-w-2xl mx-auto text-base">
-            Elige el plan que mejor se adapte a tus objetivos. Sin permanencia, 
+            Elige el plan que mejor se adapte a tus objetivos. Sin permanencia,
             cancela cuando quieras.
           </p>
         </div>
@@ -74,11 +74,10 @@ export default function Pricing() {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl p-6 ${
-                plan.highlighted
-                  ? "bg-gradient-to-br from-[#F1F65B] to-[#D4D94F] md:scale-105 shadow-2xl shadow-[#F1F65B]/20"
-                  : "bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border border-[#1f1f1f]"
-              }`}
+              className={`relative rounded-2xl p-6 ${plan.highlighted
+                ? "bg-gradient-to-br from-[#F1F65B] to-[#D4D94F] md:scale-105 shadow-2xl shadow-[#F1F65B]/20"
+                : "bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border border-[#1f1f1f]"
+                }`}
             >
               {plan.highlighted && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0a0a0a] text-[#F1F65B] px-3 py-1 rounded-full text-xs font-bold">
@@ -147,11 +146,10 @@ export default function Pricing() {
               {/* CTA */}
               <Link
                 href="#contacto"
-                className={`block w-full text-center py-3 rounded-full font-bold text-sm uppercase tracking-wide transition-all duration-300 ${
-                  plan.highlighted
-                    ? "bg-[#0a0a0a] text-[#F1F65B] hover:bg-[#1a1a1a]"
-                    : "bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] hover:shadow-lg hover:shadow-[#F1F65B]/25"
-                }`}
+                className={`block w-full text-center py-3 rounded-full font-bold text-sm uppercase tracking-wide transition-all duration-300 ${plan.highlighted
+                  ? "bg-[#0a0a0a] text-[#F1F65B] hover:bg-[#1a1a1a]"
+                  : "bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] hover:shadow-lg hover:shadow-[#F1F65B]/25"
+                  }`}
               >
                 Elegir Plan
               </Link>

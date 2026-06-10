@@ -14,33 +14,17 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Imagen placeholder */}
           <div className="relative flex justify-center lg:justify-start">
-            <div className="aspect-square w-full max-w-md bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] rounded-3xl overflow-hidden border border-[#1f1f1f]">
-              {/* Placeholder visual - reemplazar con imagen real */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto bg-gradient-to-br from-[#F1F65B] to-[#D4D94F] rounded-full flex items-center justify-center mb-4">
-                    <svg
-                      className="w-12 h-12 text-[#0a0a0a]"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-[#5a5a5a] text-xs">Imagen del gimnasio</p>
-                  <p className="text-[#3a3a3a] text-[10px] mt-1">(Placeholder)</p>
-                </div>
-              </div>
+            <div className="aspect-square w-full max-w-xl bg-[#0f0f0f] rounded-3xl overflow-hidden border border-[#1f1f1f] relative">
+              {/* Reemplaza la URL del src por la URL de tu imagen real del gimnasio */}
+              <img
+                src="imagen1.jpeg"
+                alt="Gimnasio Yin Tao"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Badge flotante */}
             <div className="absolute -bottom-4 -right-4 lg:-bottom-6 lg:-right-6 bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] px-6 py-3 rounded-2xl shadow-xl">
-              <p className="text-3xl font-black">10+</p>
+              <p className="text-3xl font-black">30+</p>
               <p className="text-xs font-medium">Años de experiencia</p>
             </div>
           </div>
@@ -55,12 +39,12 @@ export default function About() {
               <span className="block text-[#8a8a8a]">GIMNASIO</span>
             </h2>
             <p className="text-[#a0a0a0] text-base mb-5 leading-relaxed">
-              En Yin Tao creemos que el deporte transforma vidas. Somos un gimnasio 
-              de barrio donde cada persona encuentra su lugar, ya sea en la sala de 
+              En Yin Tao creemos que el deporte transforma vidas. Somos un gimnasio
+              de barrio donde cada persona encuentra su lugar, ya sea en la sala de
               musculación, en las clases funcionales o en el dojo de arte marcial.
             </p>
             <p className="text-[#a0a0a0] text-base mb-6 leading-relaxed">
-              Nuestro equipo de profesores está comprometido con vos: te acompañamos 
+              Nuestro equipo de profesores está comprometido con vos: te acompañamos
               en cada etapa, desde el primer día hasta que alcances tus metas.
             </p>
 

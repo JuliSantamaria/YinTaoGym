@@ -38,7 +38,7 @@ export default function Hero() {
 
           {/* Subtítulo */}
           <p className="text-xl md:text-2xl text-[#a0a0a0] mb-10 max-w-2xl mx-auto">
-            Gimnasio equipado, clases funcionales y Arte Marcial Yin Tao. 
+            Gimnasio equipado, clases funcionales y Arte Marcial Yin Tao.
             El gimnasio de barrio que te hace sentir en familia.
           </p>
 
@@ -77,7 +77,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 animate-bounce">
         <svg
           className="w-6 h-6 text-[#71797E]"
           fill="none"

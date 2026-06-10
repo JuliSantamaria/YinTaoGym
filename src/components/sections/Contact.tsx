@@ -1,8 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+// EmailJS configuration - set these in your .env.local file
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
+
+type FormStatus = "idle" | "sending" | "success" | "error";
 
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<FormStatus>("idle");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -10,12 +20,28 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí irá la lógica de envío del formulario
-    console.log("Form submitted:", formData);
-    alert("¡Gracias por tu mensaje! Te contactaremos pronto.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    if (!formRef.current) return;
+
+    setStatus("sending");
+
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      );
+      setStatus("success");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      // Reset success message after 5 seconds
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   const handleChange = (
@@ -150,7 +176,7 @@ export default function Contact() {
             <h3 className="text-xl font-bold text-white mb-5">
               Envíanos un mensaje
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label
                   htmlFor="name"
@@ -229,9 +255,35 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:shadow-xl hover:shadow-[#F1F65B]/30 transition-all duration-300 hover:scale-[1.02]"
+                disabled={status === "sending"}
+                className={`w-full py-3 rounded-full font-bold text-sm uppercase tracking-wide transition-all duration-300 flex items-center justify-center gap-2 ${
+                  status === "success"
+                    ? "bg-green-500 text-white"
+                    : status === "error"
+                      ? "bg-red-500 text-white"
+                      : "bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] hover:shadow-xl hover:shadow-[#F1F65B]/30 hover:scale-[1.02]"
+                } ${status === "sending" ? "opacity-70 cursor-not-allowed" : ""}`}
               >
-                Enviar Mensaje
+                {status === "sending" && (
+                  <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                  </svg>
+                )}
+                {status === "success" && (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                )}
+                {status === "error" && (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                )}
+                {status === "idle" && "Enviar Mensaje"}
+                {status === "sending" && "Enviando..."}
+                {status === "success" && "¡Mensaje Enviado!"}
+                {status === "error" && "Error al enviar. Intentá de nuevo."}
               </button>
             </form>
           </div>
