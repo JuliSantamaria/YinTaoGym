@@ -33,10 +33,13 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Compensa el header fijo (~64px) al saltar a una sección con ancla,
-   para que el título no quede tapado. */
+/* Las secciones ya tienen un padding superior generoso (py-24 = 96px) que deja
+   aire de sobra bajo el header fijo (64px). Por eso alcanza un scroll-margin
+   chico: evita el "doble espacio" y deja el título bien ubicado al saltar por
+   ancla. (Si en algún momento se reduce el padding de las secciones, subí este
+   valor cerca de 4rem para que no queden tapadas por el header). */
 section[id] {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 1rem;
 }
 
 /* Respeta a quienes prefieren menos animación */
