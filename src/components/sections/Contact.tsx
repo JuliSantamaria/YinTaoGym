@@ -120,7 +120,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-sm mb-1">Teléfono</h3>
-                  <p className="text-[#a0a0a0] text-sm">+54 9...</p>
+                  <p className="text-[#a0a0a0] text-sm">+54 9 11 5701-0631</p>
                 </div>
               </div>
 
