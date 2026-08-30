@@ -24,6 +24,8 @@ const socialLinks = [
   },
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function MaestroCarousel({ alt }: { alt: string }) {
   const [current, setCurrent] = useState(0);
 
@@ -53,7 +55,7 @@ export default function MaestroCarousel({ alt }: { alt: string }) {
           {/* Fondo desenfocado: rellena el contenedor sin importar la relación de aspecto */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={image.src}
+            src={`${basePath}/${image.src}`}
             alt=""
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl brightness-[0.45]"
@@ -61,7 +63,7 @@ export default function MaestroCarousel({ alt }: { alt: string }) {
           {/* Imagen real: bordes difuminados que se funden con el fondo */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={image.src}
+            src={`${basePath}/${image.src}`}
             alt={`${alt} — foto ${i + 1}`}
             className="relative w-full h-full object-cover"
             style={{

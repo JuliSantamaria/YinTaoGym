@@ -17,7 +17,7 @@ export default function About() {
             <div className="aspect-square w-full max-w-xl bg-[#0f0f0f] rounded-3xl overflow-hidden border border-[#1f1f1f] relative">
               {/* Reemplaza la URL del src por la URL de tu imagen real del gimnasio */}
               <img
-                src="imagen1.jpeg"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Imagen1.jpeg`}
                 alt="Gimnasio Yin Tao"
                 className="w-full h-full object-cover"
               />
