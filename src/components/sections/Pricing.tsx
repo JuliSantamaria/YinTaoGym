@@ -1,53 +1,22 @@
 import Link from "next/link";
 
 const plans = [
-  {
-    name: "Gimnasio",
-    price: "15.000",
-    period: "/mes",
-    description: "Acceso completo a la sala de musculación y cardio",
-    features: [
-      "Sala de musculación y cardio",
-      "Lunes a sábado",
-      "Vestuarios disponibles",
-      "Seguimiento inicial gratuito",
-    ],
-    notIncluded: [
-      "Clases grupales de Funcional",
-      "Clases de Arte Marcial Yin Tao",
-    ],
-    highlighted: false,
-  },
-  {
-    name: "Yin-Tao + Gimnasio",
-    price: "50.000",
-    period: "/mes",
-    description: "La combinación ideal para progresar rápido",
-    features: [
-      "Sala de musculación",
-      "Lunes a sábado",
-      "Vestuarios disponibles",
-      "Seguimiento constante",
-      "Comunidad activa y motivadora",
-      "Clases de Yin-Tao disponibles"
-    ],
-    notIncluded: [],
-    highlighted: true,
-  },
+
   {
     name: "Plan Completo",
-    price: "27.000",
+    price: "55.000",
     period: "/mes",
     description: "Acceso total: cuerpo, fuerza y disciplina",
     features: [
-      "Todo lo del plan Funcional + Gimnasio",
+      "Sala de musculación y cardio",
+      "Clases grupales de Funcional",
       "Clases de Arte Marcial Yin Tao",
       "Para niños, jóvenes y adultos",
       "Seguimiento personalizado",
       "Descuentos para grupos familiares",
     ],
     notIncluded: [],
-    highlighted: false,
+    highlighted: true,
   },
 ];
 
@@ -61,21 +30,22 @@ export default function Pricing() {
             Precios
           </span>
           <h2 className="text-3xl md:text-4xl font-black text-white mt-4 mb-6">
-            PLANES PARA TODOS
+            TODO INCLUIDO,<span className="block text-[#8a8a8a]">UN SOLO PRECIO</span>
           </h2>
           <p className="text-[#a0a0a0] max-w-2xl mx-auto text-base">
-            Elige el plan que mejor se adapte a tus objetivos. Sin permanencia,
-            cancela cuando quieras.
+            Sin categorías ni sorpresas: acceso completo al gimnasio, funcional y
+            arte marcial Yin Tao por un precio mensual fijo. Sin permanencia,
+            cancelá cuando quieras.
           </p>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
+        {/* Pricing Card */}
+        <div className="flex justify-center max-w-sm mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl p-6 ${plan.highlighted
-                ? "bg-gradient-to-br from-[#F1F65B] to-[#D4D94F] md:scale-105 shadow-2xl shadow-[#F1F65B]/20"
+              className={`relative rounded-2xl p-8 w-full ${plan.highlighted
+                ? "bg-gradient-to-br from-[#F1F65B] to-[#D4D94F] shadow-2xl shadow-[#F1F65B]/20"
                 : "bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border border-[#1f1f1f]"
                 }`}
             >
@@ -146,9 +116,9 @@ export default function Pricing() {
               {/* CTA */}
               <Link
                 href="#contacto"
-                className={`block w-full text-center py-3 rounded-full font-bold text-sm uppercase tracking-wide transition-all duration-300 ${plan.highlighted
+                className={`block w-full text-center py-3 rounded-full font-black text-sm uppercase tracking-wide transition-all duration-300 ${plan.highlighted
                   ? "bg-[#0a0a0a] text-[#F1F65B] hover:bg-[#1a1a1a]"
-                  : "bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] hover:shadow-lg hover:shadow-[#F1F65B]/25"
+                  : "bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-black hover:shadow-lg hover:shadow-[#F1F65B]/25"
                   }`}
               >
                 Elegir Plan

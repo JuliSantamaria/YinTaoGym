@@ -2,16 +2,18 @@ import Link from "next/link";
 
 const secondaryServices = [
   {
-    icon: "M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4",
+    icon: "M4 9v6 M7 6.5v11 M17 6.5v11 M20 9v6 M7 12h10",
     title: "Gimnasio",
     description:
       "Sala de musculación completa con pesas libres, máquinas y zona de cardio. Todo lo que necesitás para entrenar a tu ritmo, con el ambiente cálido del barrio.",
+    highlights: ["Pesas libres", "Máquinas", "Zona de cardio"],
   },
   {
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
     title: "Funcional",
     description:
       "Clases grupales de entrenamiento funcional para mejorar tu condición física, fuerza y resistencia. Dinámica, divertida y para todos los niveles.",
+    highlights: ["Clases en grupo", "Todos los niveles", "Fuerza y resistencia"],
   },
 ];
 
@@ -24,15 +26,18 @@ const yintaoFeatures = [
 
 export default function Services() {
   return (
-    <section id="servicios" className="py-24 bg-[#0a0a0a]/50">
-      <div className="container mx-auto px-4">
+    <section id="servicios" className="relative py-24 bg-[#0a0a0a]/50 overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#F1F65B]/[0.03] rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container mx-auto px-4 relative">
         {/* Header */}
         <div className="text-center mb-16 flex flex-col items-center">
           <span className="text-[#F1F65B] font-semibold uppercase tracking-wide text-xs">
             Nuestros Servicios
           </span>
           <h2 className="text-3xl md:text-4xl font-black text-white mt-4 mb-6">
-            TODO LO QUE NECESITAS
+            TODO LO QUE NECESITÁS
           </h2>
           <p className="text-[#a0a0a0] max-w-2xl mx-auto text-base">
             Tres propuestas para cada objetivo: tu cuerpo, tu condición y tu
@@ -97,7 +102,7 @@ export default function Services() {
                 {/* CTA */}
                 <Link
                   href="#contacto"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-wide hover:shadow-lg hover:shadow-[#F1F65B]/25 transition-all duration-300"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-black px-6 py-2.5 rounded-full font-black text-xs uppercase tracking-wide hover:shadow-lg hover:shadow-[#F1F65B]/25 transition-all duration-300"
                 >
                   Quiero empezar
                   <svg
@@ -123,10 +128,13 @@ export default function Services() {
             {secondaryServices.map((service, index) => (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] p-6 rounded-2xl border border-[#1f1f1f] hover:border-[#F1F65B]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#F1F65B]/10"
+                className="group relative flex flex-col overflow-hidden bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] p-6 rounded-2xl border border-[#1f1f1f] hover:border-[#F1F65B]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#F1F65B]/10"
               >
+                {/* Corner glow */}
+                <div className="absolute -top-16 -right-16 w-40 h-40 bg-[#F1F65B]/[0.04] rounded-full blur-3xl pointer-events-none group-hover:bg-[#F1F65B]/[0.09] transition-all duration-500" />
+
                 {/* Icon */}
-                <div className="w-12 h-12 bg-gradient-to-br from-[#F1F65B] to-[#D4D94F] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <div className="relative w-12 h-12 bg-gradient-to-br from-[#F1F65B] to-[#D4D94F] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                   <svg
                     className="w-7 h-7 text-[#0a0a0a]"
                     fill="none"
@@ -143,16 +151,43 @@ export default function Services() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-bold text-white mb-2">
+                <h3 className="relative text-lg font-bold text-white mb-2">
                   {service.title}
                 </h3>
-                <p className="text-[#a0a0a0] leading-relaxed text-sm">
+                <p className="relative text-[#a0a0a0] leading-relaxed text-sm mb-5">
                   {service.description}
                 </p>
 
-                {/* Arrow */}
-                <div className="mt-5 flex items-center gap-2 text-[#F1F65B] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* Highlights */}
+                <div className="relative flex flex-wrap gap-2 mb-6">
+                  {service.highlights.map((h) => (
+                    <span
+                      key={h}
+                      className="bg-[#1f1f1f] text-[#a0a0a0] text-xs font-medium px-3 py-1.5 rounded-lg border border-[#2a2a2a]"
+                    >
+                      {h}
+                    </span>
+                  ))}
+                </div>
 
+                {/* Footer: incluido en el plan */}
+                <div className="relative mt-auto pt-4 border-t border-[#1f1f1f] flex items-center gap-2">
+                  <svg
+                    className="w-4 h-4 text-[#F1F65B] flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span className="text-xs text-[#8a8a8a]">
+                    Incluido en tu plan
+                  </span>
                 </div>
               </div>
             ))}

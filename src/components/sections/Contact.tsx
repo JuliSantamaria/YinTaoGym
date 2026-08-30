@@ -55,7 +55,7 @@ export default function Contact() {
 
   return (
     <section id="contacto" className="py-24 bg-[#0a0a0a]/50">
-      <div className="container mx-auto px  -4">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Info */}
           <div className="text-center lg:text-left">
@@ -67,8 +67,7 @@ export default function Contact() {
               <span className="block text-[#8a8a8a]">EMPEZAR?</span>
             </h2>
             <p className="text-[#a0a0a0] text-base mb-6 leading-relaxed">
-              ¿Querés conocer el gimnasio? ¡Vení a visitarnos, la primera clase
-              es gratis! Te esperamos con los brazos abiertos.
+              ¿Querés conocer el gimnasio? ¡Vení a visitarnos! Te esperamos con los brazos abiertos.
             </p>
 
             {/* Contact info */}
@@ -165,7 +164,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-sm mb-1">Horario</h3>
-                  <p className="text-[#a0a0a0] text-sm">Lunes a Viernes: 7:00 – 21:00 | Sábados: 8:00 – 13:00</p>
+                  <p className="text-[#a0a0a0] text-sm">Lunes a Viernes: 8:00 – 21:00 | Sábados: 8:00 – 16:00</p>
                 </div>
               </div>
             </div>
@@ -174,7 +173,7 @@ export default function Contact() {
           {/* Form */}
           <div className="bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] p-6 rounded-2xl border border-[#1f1f1f]">
             <h3 className="text-xl font-bold text-white mb-5">
-              Envíanos un mensaje
+              Envianos un mensaje
             </h3>
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
               <div>
@@ -229,7 +228,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full bg-[#0a0a0a] border border-[#1f1f1f] rounded-lg px-4 py-2.5 text-sm text-white placeholder-[#5a5a5a] focus:outline-none focus:border-[#F1F65B] transition-colors duration-300"
-                    placeholder="+34 600 000 000"
+                    placeholder="+54 9 11 0000 0000"
                   />
                 </div>
               </div>
@@ -256,13 +255,12 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className={`w-full py-3 rounded-full font-bold text-sm uppercase tracking-wide transition-all duration-300 flex items-center justify-center gap-2 ${
-                  status === "success"
-                    ? "bg-green-500 text-white"
-                    : status === "error"
-                      ? "bg-red-500 text-white"
-                      : "bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] hover:shadow-xl hover:shadow-[#F1F65B]/30 hover:scale-[1.02]"
-                } ${status === "sending" ? "opacity-70 cursor-not-allowed" : ""}`}
+                className={`w-full py-3 rounded-full font-black text-sm uppercase tracking-wide transition-all duration-300 flex items-center justify-center gap-2 ${status === "success"
+                  ? "bg-green-500 text-white"
+                  : status === "error"
+                    ? "bg-red-500 text-white"
+                    : "bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-black hover:shadow-xl hover:shadow-[#F1F65B]/30 hover:scale-[1.02]"
+                  } ${status === "sending" ? "opacity-70 cursor-not-allowed" : ""}`}
               >
                 {status === "sending" && (
                   <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">

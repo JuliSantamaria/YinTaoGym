@@ -9,7 +9,7 @@ const navLinks = [
   { href: "#servicios", label: "Servicios" },
   { href: "#nosotros", label: "Nosotros" },
   { href: "#precios", label: "Precios" },
-  { href: "#entrenadores", label: "Entrenadores" },
+  { href: "#entrenadores", label: "Maestro" },
   { href: "#resenas", label: "Reseñas" },
   { href: "#contacto", label: "Contacto" },
 ];
@@ -59,9 +59,9 @@ export default function Header() {
           <div className="hidden md:block">
             <Link
               href="#contacto"
-              className="bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] px-5 py-2 rounded-full font-bold text-xs uppercase tracking-wide hover:shadow-lg hover:shadow-[#F1F65B]/25 transition-all duration-300"
+              className="bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-black px-5 py-2 rounded-full font-black text-xs uppercase tracking-wide hover:shadow-lg hover:shadow-[#F1F65B]/25 transition-all duration-300"
             >
-              Únete Ahora
+              Unite Ahora
             </Link>
           </div>
 
@@ -111,10 +111,10 @@ export default function Header() {
             ))}
             <Link
               href="#contacto"
-              className="block mt-4 bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider text-center"
+              className="block mt-4 bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-black px-6 py-3 rounded-full font-black text-sm uppercase tracking-wider text-center"
               onClick={() => setIsMenuOpen(false)}
             >
-              Únete Ahora
+              Unite Ahora
             </Link>
           </nav>
         )}

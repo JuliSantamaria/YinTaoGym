@@ -46,7 +46,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full mt-4">
             <Link
               href="#precios"
-              className="inline-flex items-center justify-center bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-wide hover:shadow-xl hover:shadow-[#F1F65B]/30 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-black px-8 py-3.5 rounded-full font-black text-sm uppercase tracking-wide hover:shadow-xl hover:shadow-[#F1F65B]/30 transition-all duration-300 hover:scale-105"
             >
               Comenzar Ahora
             </Link>
@@ -57,6 +57,26 @@ export default function Hero() {
               Ver Servicios
             </Link>
           </div>
+
+          {/* Reassurance
+          <p className="mt-6 flex items-center gap-2 text-sm text-[#a0a0a0]">
+            <svg
+              className="w-4 h-4 text-[#F1F65B]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            Primera clase{" "}
+            <span className="text-[#F1F65B] font-semibold">gratis</span> · Sin
+            permanencia
+          </p> */}
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-[#1f1f1f] w-full">
@@ -77,7 +97,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 animate-bounce">
         <svg
           className="w-6 h-6 text-[#71797E]"
           fill="none"

@@ -25,7 +25,7 @@ export default function About() {
             {/* Badge flotante */}
             <div className="absolute -bottom-4 -right-4 lg:-bottom-6 lg:-right-6 bg-gradient-to-r from-[#F1F65B] to-[#D4D94F] text-[#0a0a0a] px-6 py-3 rounded-2xl shadow-xl">
               <p className="text-3xl font-black">30+</p>
-              <p className="text-xs font-medium">Años de experiencia</p>
+              <p className="text-xs font-medium">Años de Yin Tao</p>
             </div>
           </div>
 
