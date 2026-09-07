@@ -22,7 +22,6 @@ export default function Hero() {
         <div className="w-full max-w-4xl mx-auto text-center flex flex-col items-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-[#1f1f1f]/50 border border-[#3a3a3a] rounded-full px-2 py-2 mb-8">
-            <span className="w-1.5 h-1.5 bg-[#F1F65B] rounded-full animate-pulse"></span>
             <span className="text-[#a0a0a0] text-xs font-medium">
               Tu barrio, tu gimnasio — ¡Yin Tao te espera!
             </span>

@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === "production";
-const basePath = isProd ? "/YinTaoGym" : "";
+// El basePath SOLO es necesario en GitHub Pages (sitio servido bajo /YinTaoGym).
+// En Vercel o dominio propio la web va en la raíz, así que debe quedar vacío.
+// El workflow de GitHub Pages debe exportar GITHUB_PAGES=true al hacer el build.
+const isGithubPages = process.env.GITHUB_PAGES === "true";
+const basePath = isGithubPages ? "/YinTaoGym" : "";
 const nextConfig = {
   reactStrictMode: true,
   output: "export",
